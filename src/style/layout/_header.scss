@@ -1,0 +1,51 @@
+@use "../helpers/varibels" as *;
+@use "../helpers/mixins" as *;
+//
+@use "./grid" as *;
+//
+@use "../componants/botton" as *;
+@use "../componants/heading" as *;
+
+// start nav-bar  >> Not Login <<
+
+.nav-bar {
+  background-color: $dark-color !important;
+  color: white !important;
+  .navb {
+    background-color: $dark-color !important;
+    color: white !important;
+  }
+  img {
+    width: 90px;
+    margin: 0 20px;
+  }
+  .navbar-nav {
+    width: 100%;
+    .form {
+      flex-basis: 80%;
+    }
+  }
+  .links-container {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    @include tablet {
+      justify-content: space-evenly;
+      gap: 30px;
+    }
+    & div {
+      display: flex;
+      align-items: center;
+      color: white;
+      cursor: pointer;
+      gap: 3px;
+      span {
+        padding-bottom: 3px;
+      }
+      transition: 0.4s;
+      &:hover {
+        color: rgba(255, 255, 255, 0.756);
+      }
+    }
+  }
+}

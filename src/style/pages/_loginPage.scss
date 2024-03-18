@@ -1,0 +1,123 @@
+@use "../helpers/varibels" as *;
+@use "../helpers/mixins" as *;
+
+//
+@use "../componants/heading" as *;
+@use "../componants/botton" as *;
+//
+@use "../layout/footer" as *;
+@use "../layout/grid" as *;
+@use "../layout/header" as *;
+//  start login page
+.login-page {
+  .box {
+    box-shadow: rgba(50, 50, 105, 0.15) 0px 2px 5px 0px,
+      rgba(0, 0, 0, 0.05) 0px 1px 1px 0px;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+
+    padding: 20px;
+    margin: 20px;
+    background-color: white;
+    border-radius: 20px;
+    @include tablet {
+      flex-direction: column;
+    }
+    .form {
+      flex-basis: 50%;
+      display: flex;
+      align-items: center;
+      flex-direction: column;
+      justify-content: center;
+      @include tablet {
+        width: 100%;
+      }
+      h3 {
+        font-weight: bold;
+        font-size: 28px;
+        margin: 20px 0;
+        color: #232f3e;
+      }
+      input {
+        border: 2px solid #ccc;
+        border-radius: 22px;
+        padding: 10px 10px;
+        color: #232f3e;
+        outline: none;
+        width: 60%;
+        margin-bottom: 20px;
+        transition: 0.3s;
+        @include tablet {
+          width: 100%;
+        }
+        &:focus {
+          border: 2px solid #232f3e;
+        }
+      }
+      .forget {
+        transform: translateX(58px);
+        color: #777;
+        font-size: 14px;
+        margin: 0 0 20px;
+        cursor: pointer;
+      }
+      .btn {
+        width: 60%;
+        border-radius: 22px;
+        padding: 10px;
+        margin: 0px 0 20px;
+        display: flex;
+        align-items: center;
+        gap: 15px;
+        justify-content: center;
+        font-weight: bold;
+        border: 1px solid #ccc;
+        @include tablet {
+          width: 100%;
+        }
+      }
+      .btn:first-of-type {
+        background-color: rgb(2, 174, 174);
+        transition: 0.4s;
+        &:hover {
+          background-color: rgb(14, 202, 202);
+        }
+      }
+      .btn:nth-child(7) {
+        background-color: rgb(0, 0, 0);
+        transition: 0.4s;
+        color: white;
+        &:hover {
+          background-color: rgb(36, 37, 37);
+        }
+      }
+      .btn:last-of-type {
+        background-color: rgb(246, 246, 246);
+        transition: 0.4s;
+        color: black;
+        i {
+          color: lightseagreen;
+        }
+        &:hover {
+          background-color: rgb(228, 228, 228);
+        }
+      }
+      p {
+        font-size: 15px;
+        span {
+          color: aqua;
+          font-weight: bold;
+          cursor: pointer;
+        }
+      }
+    }
+    .img {
+      flex-basis: 50%;
+      img {
+        max-width: 100%;
+        border-radius: 20px;
+      }
+    }
+  }
+}

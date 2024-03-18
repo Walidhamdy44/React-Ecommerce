@@ -1,0 +1,99 @@
+@use "../helpers/varibels" as *;
+@use "../helpers/mixins" as *;
+//
+@use "./grid" as *;
+//
+@use "../componants/botton" as *;
+@use "../componants/heading" as *;
+
+//  start footer
+.footer {
+  background-color: #232f3e;
+  color: white;
+  padding: 50px 0 0;
+  .footer-container {
+    .top {
+      display: flex;
+      align-items: center;
+      gap: 20px;
+      flex-wrap: wrap;
+      justify-content: space-evenly;
+      padding-bottom: 40px;
+      border-bottom: 1px solid white;
+      .box {
+        @include larg {
+          width: auto;
+        }
+        @include mobile {
+          width: 170px;
+        }
+        h3 {
+          font-size: 20px;
+          font-weight: bold;
+        }
+        ul {
+          li {
+            cursor: pointer;
+            transition: 0.4s;
+            font-size: 14px;
+            padding-bottom: 2px;
+            border-bottom: 1px solid transparent;
+            width: fit-content;
+            &:hover {
+              border-bottom: 1px solid rgb(204, 200, 200);
+            }
+          }
+        }
+      }
+    }
+    .middel {
+      display: flex;
+      justify-content: space-evenly;
+      align-items: center;
+      gap: 30px;
+      padding: 20px 0;
+      .logo {
+        max-width: 100%;
+        width: 100px;
+      }
+      .egypt-box {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        border: 1px solid white;
+        padding: 10px;
+        justify-content: center;
+        border-radius: 10px;
+        .egypt {
+          max-width: 100%;
+          width: 30px;
+          background-color: #232f3e;
+        }
+        span {
+          cursor: pointer;
+        }
+      }
+    }
+  }
+  .bottom {
+    .links {
+      text-align: center;
+    }
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    background-color: #131a22;
+    padding: 20px;
+    font-size: 14px;
+    span {
+      cursor: pointer;
+      padding: 4px 4px 0;
+      transition: 0.3s;
+      border: 1px solid transparent;
+      &:hover {
+        border-bottom: 1px solid white;
+      }
+    }
+  }
+}

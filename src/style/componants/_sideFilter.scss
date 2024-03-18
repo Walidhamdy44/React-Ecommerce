@@ -1,0 +1,54 @@
+@use "../helpers/mixins" as *;
+@use "../helpers/varibels" as *;
+@use "../layout/grid" as *;
+
+.side {
+  .box {
+    div {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+    input[type="number"] {
+      width: 50px;
+      margin-bottom: 10px;
+    }
+  }
+}
+// start Admin said bar >>>
+.admin-side {
+  background-color: white;
+  border-radius: 10px;
+  height: 100%;
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+  ul {
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    flex-direction: column;
+    text-align: center;
+    li {
+      font-size: 16px;
+      @include tablet {
+        font-size: 14px;
+      }
+      text-align: center;
+      width: 100%;
+      border-bottom: 1px solid #ccc;
+      cursor: pointer;
+      padding: 10px 0;
+      transition: 0.4s;
+      &:hover {
+        background-color: #232f3e;
+        color: white;
+        a {
+          color: white;
+        }
+      }
+      a {
+        color: black;
+        transition: 0.4s;
+      }
+    }
+  }
+}

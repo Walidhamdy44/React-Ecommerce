@@ -1,0 +1,50 @@
+@use "../helpers/mixins" as *;
+@use "../helpers/varibels" as *;
+@use "../layout/grid" as *;
+
+.cat-header {
+  .active {
+    font-weight: bold;
+    color: darkcyan;
+  }
+  background-color: white;
+  ul {
+    display: flex;
+    align-items: center;
+    gap: 25px;
+    padding: 20px 0;
+    @include tablet {
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 20px;
+    }
+    li {
+      color: #585757;
+      transition: 0.3s;
+      cursor: pointer;
+      font-size: 17px;
+      &:hover {
+        color: black;
+      }
+    }
+  }
+}
+.sort-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 0 20px;
+  h3 {
+    font-weight: bold;
+    span {
+      color: deepskyblue;
+    }
+  }
+
+  .sort {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    cursor: pointer;
+  }
+}

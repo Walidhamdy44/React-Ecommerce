@@ -1,0 +1,200 @@
+@use "../helpers/varibels" as *;
+@use "../helpers/mixins" as *;
+
+//
+@use "../componants/heading" as *;
+@use "../componants/botton" as *;
+//
+@use "../layout/footer" as *;
+@use "../layout/grid" as *;
+@use "../layout/header" as *;
+
+.image-gallery-right-nav .image-gallery-svg {
+  height: 70px !important;
+  width: 28px !important;
+}
+.image-gallery-left-nav .image-gallery-svg {
+  height: 70px !important;
+  width: 28px !important;
+}
+.gallarybox {
+  border-radius: 20px;
+  box-shadow: rgba(17, 17, 26, 0.05) 0px 1px 0px,
+    rgba(17, 17, 26, 0.1) 0px 0px 8px;
+  background-color: white;
+  img {
+    max-width: 100%;
+    width: 300px;
+    height: 450px;
+  }
+}
+.info {
+  margin-top: 20px;
+  padding: 0 10px;
+  display: flex;
+  gap: 20px;
+  flex-direction: column;
+  h5,
+  .color {
+    font-size: 15px;
+    font-weight: 700;
+    color: #777;
+    span {
+      color: aqua;
+      font-weight: bold;
+      padding: 0 5px;
+    }
+  }
+
+  .circles {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    .circle {
+      width: 30px;
+      box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px inset,
+        rgba(0, 0, 0, 0.3) 0px 18px 36px -18px inset;
+      cursor: pointer;
+      height: 30px;
+      border-radius: 50%;
+    }
+    .circle.active {
+      border: 4px solid white;
+      outline: 1px solid #ccc;
+    }
+    .circle:first-of-type {
+      background-color: red;
+    }
+    .circle:nth-child(2) {
+      background-color: black;
+    }
+    .circle:last-of-type {
+      background-color: white;
+    }
+  }
+  .price {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    margin: 20px 0;
+    .btn {
+      background-color: white;
+      color: black;
+      padding: 15px 20px;
+      border-radius: 15px;
+      font-weight: bold;
+      border-color: black;
+      transition: 0.4s;
+      &:hover {
+        background-color: #ccc;
+      }
+    }
+    span {
+      border-radius: 15px;
+      border: 1px solid black;
+      background-color: black;
+      color: white;
+      font-size: 18px;
+      display: inline-block;
+      padding: 10px 20px;
+    }
+  }
+}
+//  >.>...............>>>>>>>
+// start rate
+
+.rate-item {
+  border-bottom: 1px solid #ccc;
+  border-top: 1px solid #ccc;
+  padding: 10px;
+  display: flex;
+  gap: 20px;
+  flex-direction: column;
+  background-color: #f8f9fa;
+  margin: 20px 0 0;
+  .name {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    div {
+      display: flex;
+      align-items: center;
+      gap: 5px;
+      span {
+        color: rgb(238, 202, 2);
+        font-weight: bold;
+      }
+    }
+    img {
+      width: 20px;
+    }
+  }
+}
+.rate-container {
+  padding: 20px;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px,
+    rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+  background-color: white;
+  border-radius: 20px;
+
+  margin-bottom: 20px;
+  .rate-head {
+    .s-head {
+      font-size: 22px;
+      font-weight: bold;
+    }
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    div {
+      display: flex;
+      align-items: center;
+      gap: 5px;
+      span {
+        color: rgb(238, 202, 2);
+        font-weight: bold;
+      }
+    }
+    img {
+      width: 20px;
+    }
+  }
+}
+.rate-post {
+  margin: 20px 0 0px;
+  padding-bottom: 20px;
+  border-bottom: 1px solid #ccc;
+  & > div {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 10px;
+  }
+  textarea {
+    width: 100%;
+    height: 145px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    outline: none;
+  }
+  .btn {
+    border-radius: 15px;
+    border: 1px solid black;
+    background-color: black;
+    color: white;
+    font-size: 18px;
+    display: inline-block;
+    padding: 10px 20px;
+    transition: 0.4s;
+    font-weight: 700;
+    &:hover {
+      background-color: white;
+      color: black;
+    }
+  }
+  .input {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}

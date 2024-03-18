@@ -1,0 +1,56 @@
+import React from "react";
+import { Button } from "react-bootstrap";
+import LoadingAnimation from "../../components/utilty/LoadingAnimation";
+import { Toaster } from "react-hot-toast";
+import AddCatagoryLogic from "../../logic/catagory/AddCatagoryLogic";
+
+const AdminNewCatagury = () => {
+  // structure from the logic file
+  const [
+    img,
+    name,
+    loading,
+    isPress,
+    onimageChange,
+    OnchangeName,
+    handelSubmit,
+  ] = AddCatagoryLogic();
+
+  return (
+    <div>
+      <div className="new-brand">
+        <span>Catagury Image</span>
+        <div className="p-relative">
+          <label htmlFor="file">
+            <img alt="ddd" src={img} />
+          </label>
+          <input
+            type="file"
+            id="file"
+            name="file"
+            onChange={onimageChange}
+            style={{
+              position: "absolute",
+              zIndex: "0",
+              opacity: 0,
+              width: "20px",
+              cursor: "pointer",
+            }}
+          />
+        </div>
+        <input
+          type="text"
+          placeholder="Catagury Name"
+          value={name}
+          onChange={OnchangeName}
+        />
+
+        <Button onClick={handelSubmit}>Save Changes</Button>
+        {isPress ? loading ? <LoadingAnimation /> : <h4>Done ...</h4> : null}
+      </div>
+      <Toaster position="top-center" reverseOrder={false} />
+    </div>
+  );
+};
+
+export default AdminNewCatagury;
